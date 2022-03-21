@@ -25,9 +25,10 @@ class _LoginDemoState extends State<LoginDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black12,
       appBar: AppBar(
         title: Text("Login Page"),
+        backgroundColor: Colors.indigo,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -41,7 +42,7 @@ class _LoginDemoState extends State<LoginDemo> {
                     /*decoration: BoxDecoration(
                         color: Colors.red,
                         borderRadius: BorderRadius.circular(50.0)),*/
-                    child: Image.asset('images/flutter-logo.png')),
+                    child: Image.asset('images/talkyard.png')),
               ),
             ),
             Padding(
@@ -73,14 +74,14 @@ class _LoginDemoState extends State<LoginDemo> {
               },
               child: Text(
                 'Forgot Password',
-                style: TextStyle(color: Colors.blue, fontSize: 15),
+                style: TextStyle(color: Colors.indigo, fontSize: 15),
               ),
             ),
             Container(
               height: 50,
               width: 250,
               decoration: BoxDecoration(
-                  color: Colors.blue, borderRadius: BorderRadius.circular(20)),
+                  color: Colors.indigo, borderRadius: BorderRadius.circular(20)),
               child: FlatButton(
                 onPressed: () {
                   Navigator.push(

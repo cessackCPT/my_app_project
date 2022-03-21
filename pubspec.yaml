@@ -46,10 +46,20 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^1.0.0
 
+#  this is for adding the splash screen
+  flutter_native_splash: ^0.2.8
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter.
+# this is for the flutter splash screen
+flutter_native_splash:
+  color: purple
+  image: assets/splash.png
+  android: true
+  ios: true
+
 flutter:
 
   # The following line ensures that the Material Icons font is

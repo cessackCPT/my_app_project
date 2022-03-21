@@ -9,15 +9,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black12,
       appBar: AppBar(
         title: Text('Home Page'),
+        backgroundColor: Colors.indigo,
       ),
       body: Center(
         child: Container(
           height: 80,
           width: 150,
           decoration: BoxDecoration(
-              color: Colors.blue, borderRadius: BorderRadius.circular(10)),
+              color: Colors.indigo, borderRadius: BorderRadius.circular(10)),
           child: FlatButton(
             onPressed: () {
               Navigator.pop(context);
