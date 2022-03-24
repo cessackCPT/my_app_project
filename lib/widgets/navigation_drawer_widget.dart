@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_app_project/feed/landing_page.dart';
+import 'package:my_app_project/login/HomePage.dart';
 import 'package:my_app_project/ranking/leaderboard.dart';
 
 class NavigationDrawerWidget extends StatelessWidget{
@@ -14,24 +16,33 @@ class NavigationDrawerWidget extends StatelessWidget{
           children: <Widget>[
             const SizedBox(height: 48),
             buildMenuItem(
+              text: 'Home',
+              icon: Icons.home,
+              onClicked: () => selectedItem(context, 0),
+            ),
+            const SizedBox(height: 16),
+            buildMenuItem(
               text: 'Leaderboard',
               icon: Icons.leaderboard_outlined,
-              onClicked: () => selectedItem(context, 0),
+              onClicked: () => selectedItem(context, 1),
             ),
             const SizedBox(height: 16),
             buildMenuItem(
               text: 'Prizes',
               icon: Icons.monetization_on,
+              onClicked: () => selectedItem(context, 2),
             ),
             const SizedBox(height: 16),
             buildMenuItem(
               text: 'Questions',
               icon: Icons.queue,
+              onClicked: () => selectedItem(context, 3),
             ),
             const SizedBox(height: 16),
             buildMenuItem(
               text: 'Answers',
               icon: Icons.question_answer_outlined,
+              onClicked: () => selectedItem(context, 4),
             ),
           ],
         ),
@@ -59,6 +70,26 @@ class NavigationDrawerWidget extends StatelessWidget{
     void selectedItem(BuildContext context, int index){
       switch (index){
         case 0:
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => HomePage(),
+          ));
+          break;
+        case 1:
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => Profile(),
+          ));
+          break;
+        case 2:
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => Profile(),
+          ));
+          break;
+        case 3:
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => Profile(),
+          ));
+          break;
+        case 4:
           Navigator.of(context).push(MaterialPageRoute(
             builder: (context) => Profile(),
           ));
