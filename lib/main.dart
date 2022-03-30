@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+//research and resources which I used to help build this project
 // references:
 // https://github.com/codewithdhruv22/KBC_QUIZ/blob/main/VideoNo15Code/profile.dart
 // https://github.com/yogitakumar/logindemo

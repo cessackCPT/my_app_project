@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app_project/feed/landing_page.dart';
 import 'package:my_app_project/login/HomePage.dart';
+import 'package:my_app_project/login/login_page.dart';
 import 'package:my_app_project/ranking/leaderboard.dart';
 
 class NavigationDrawerWidget extends StatelessWidget{
@@ -44,6 +45,12 @@ class NavigationDrawerWidget extends StatelessWidget{
               icon: Icons.question_answer_outlined,
               onClicked: () => selectedItem(context, 4),
             ),
+            // const SizedBox(height: 16),
+            // buildMenuItem(
+            //   text: 'Logout',
+            //   icon: Icons.question_answer_outlined,
+            //   onClicked: () => selectedItem(context, 4),
+            // ),
           ],
         ),
       ),
@@ -81,7 +88,7 @@ class NavigationDrawerWidget extends StatelessWidget{
           break;
         case 2:
           Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) => Profile(),
+            builder: (context) => Land(),
           ));
           break;
         case 3:
@@ -94,6 +101,11 @@ class NavigationDrawerWidget extends StatelessWidget{
             builder: (context) => Profile(),
           ));
           break;
+        // case 5:
+        //   Navigator.of(context).push(MaterialPageRoute(
+        //     builder: (context) => MyApp(),
+        //   ));
+        //   break;
       }
     }
   }

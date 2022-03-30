@@ -15,17 +15,27 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text('Home Page'),
         backgroundColor: Colors.indigo,
+        actions: [
+          //change this to different icon
+          IconButton(onPressed: (){}, icon: const Icon(Icons.access_alarm),)
+        ],
       ),
-      body: Center(
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-              image: AssetImage("images/brainstorm.jpg"),
-              fit: BoxFit.cover),
+      body: Column(
+          children: [
+            Expanded(
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    image: DecorationImage(
+                    image: AssetImage("images/brainstorm.jpg"),
+                    fit: BoxFit.cover),
+                  ),
+              ),
             ),
+          ],
         ),
-        ),
+
     );
   }
 }
